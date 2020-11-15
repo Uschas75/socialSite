@@ -1,0 +1,25 @@
+{
+  "name": "socialsite",
+  "version": "1.0.0",
+  "description": "socialSite",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver" : "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "prefix:css": "postcss css/style.comp.css -u autoprefixer -o css/style.prefix.css",
+    "compress:css": "node-sass --output-style compressed css/style.prefix.css  css/style.css ",
+    "build:css": "npm-run-all compile:sass  prefix:css compress:css"
+  },
+  "author": "Uschas",
+  "license": "ISC",
+  "browserslist": "last 10 versions",
+  "devDependencies": {
+    "autoprefixer": "^10.0.2",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.1.7",
+    "postcss-cli": "^8.2.0"
+  }
+}
