@@ -1,8 +1,10 @@
 const countries =[
-    {name: 'usa'},
-    {name: 'india'},
-    {name: 'bangladesh'},
-    {name: 'bulgeria'}
+    {name: 'html'},
+    {name: 'css'},
+    {name: 'javascript'},
+    {name: 'php'},
+    {name: 'laravel'}
+
 ]
 
 const  searchInput = document.querySelector('.searchInput');

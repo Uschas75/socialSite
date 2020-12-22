@@ -22,7 +22,7 @@ function popUpFunction(){
     newsFeedSection.style.filter = "blur(50px)";
 
 
-    chatFooter.style.display = "block";
+    chatFooter.style.display = "grid";
     chatFooter.style.position = "fixed";
     chatFooter.style.top = "5vh";
     chatFooter.style.right ="25vw";

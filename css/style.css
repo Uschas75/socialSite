@@ -318,13 +318,10 @@ body {
 
 .chatFooter2 {
   grid-column: chatFooter-start / chatFooter-end;
-  display: grid;
+  display: none;
   grid-template-rows: [chat-start] 80vh [chat-end footer-start] min-content [footer-end];
   grid-template-columns: 1fr;
   grid-row-gap: .4rem; }
-  @media screen and (max-width: 37.5em) {
-    .chatFooter2 {
-      display: none; } }
 
 .newsFeed {
   grid-column: newsFeed-start / newsFeed-end;
