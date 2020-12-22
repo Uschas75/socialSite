@@ -1,0 +1,222 @@
+.newsFeed-sub{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: [profileDetails-start] min-content [profileDetails-end workDetails-start] 50vh [workDetails-end reaction-start]
+            min-content[reaction-end commentDetails-start] min-content [commentDetails-end]  ;
+  background-color: rgba(140, 65, 230, 0.05);
+  border-radius: 1.3rem;
+  margin-bottom: .4rem;
+}
+
+.profileDetails{
+  grid-row: profileDetails-start/profileDetails-end;
+  grid-column:1/-1;
+  display: grid;
+  grid-template-columns: [profilePic-start]min-content [profilePic-end profileOthers-start] 1fr [profileOthers-end];
+  grid-template-rows: min-content;
+
+  &__bio{
+    align-self: center;
+  }
+}
+
+
+.workDetails {
+  grid-row: workDetails-start / workDetails-end;
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(140, 65, 230, 0.2);
+  border-radius: 1.3rem;
+
+  &__Div{
+    width: 100%;
+    height: 90%;
+    padding: .4rem;
+    overflow: hidden;
+      &:hover{
+        overflow: auto;
+      }
+  }
+  &__img{
+    width: 100%;
+    height: auto;
+
+  }
+  &__text{
+    font-size: 2rem;
+    width: 100%;
+    height: auto;
+
+    font-weight: 300;
+    word-spacing: .3rem;
+    line-height: 3.2rem;
+    padding: 1.5rem;
+  }
+  &__reactionCount{
+    display: flex;
+
+    .reactionsLike{
+      display: flex;
+      align-items: center;
+      padding-right: 1.6rem;
+    }
+
+    .reactionComment{
+      padding-right: 1.6rem;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      svg{
+        align-self: flex-end;
+      }
+    }
+    .reactionShare{
+      display: flex;
+      align-items: center;
+    }
+    .workCategory{
+      align-self: center;
+      margin-left: auto;
+        th{
+          padding-right: 1rem;
+          padding-left: 1rem;
+          font-size: 1.2rem;
+          font-weight: 600;
+          color: #793bc6;
+        }
+        td{
+          padding-right: 1rem;
+          padding-left: 1rem;
+          font-size: 1.1rem;
+          font-weight: 400;
+        }
+    }
+  }
+
+}
+
+.reactionDetails {
+  grid-row: reaction-start/reaction-end;
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+  padding:1.3rem;
+}
+
+.name{
+  font-size: 1.4rem;
+  font-weight: 400;
+  color:$color-grey-dark;
+}
+
+.commentDetails{
+  grid-template-rows: commentDetails-start / commentDetails-end;
+  grid-template-columns: 1/-1;
+  padding: 2rem;
+  display: none;
+    .profileBasedComment{
+      display: flex;
+        .commentText{
+          align-self: center;
+        }
+    }
+}
+
+
+
+//comment input div
+.commentInput__div{
+  padding-left: 10%;
+  .commentInput{
+    width: 80%;
+    height: 3rem;
+    border: 1.5px solid #8c43e6;
+    border-radius: 1rem;
+    &:focus{
+      outline: none;
+      border: 2.5px solid $color-primary-dark;
+      border-radius: 1rem;
+    }
+  }
+  .commentBtn{
+    border: none;
+    padding: .7rem 1.6rem;
+    font-size: 1.4rem;
+    background: linear-gradient(to right, #5e2c99, #793bc6, #8c43e6);
+    color: #FAFAFA;
+    border-radius: 1rem;
+    width: fit-content;
+    box-shadow: grey 0 0 .5rem 0.05rem;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    &:active,
+    &:focus{
+      outline: none;
+      animation: btnAnimation .8s;
+    }
+  }
+}
+
+
+
+
+.location{
+  font-size: 1rem;
+  font-weight: 400;
+  color: $color-grey-dark;
+}
+
+
+//comments details
+.like{
+  display: flex;
+  align-items: center;
+  padding-right: 6.6rem;
+}
+.comment{
+  padding-right: 6.6rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+    svg{
+      align-self: flex-end;
+    }
+}
+.share{
+  display: flex;
+  align-items: center;
+}
+
+.commentIcon{
+  width: 2.4rem;
+  height: 2.3rem;
+  fill: $color-primary;
+}
+ .para{
+   padding:1.2rem 1.4rem .4rem 1.4rem;
+   font-size: 1.5rem;
+   font-weight: 400;
+}
+
+
+
+ .displayBlock{
+   display: block;
+ }
+
+
+
+
+ //reaction count
+ .reactionPara{
+   padding:1.2rem 1.4rem .4rem 1.4rem;
+   font-size: 1rem;
+   font-weight: 400;
+ }
+ .reactionIcon{
+   width: 1.5rem;
+   height: 1.5rem;
+   fill: $color-primary;
+ }

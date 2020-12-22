@@ -1,0 +1,203 @@
+.upload{
+  grid-column: upload-start/upload-end;
+  display: grid;
+  grid-template-columns: [uploadfull-start dp-start]max-content [dp-end text-start] max-content [text-end media-start category-start] min-content[category-end media-end uploadfull-end];
+  grid-template-rows: repeat(3 , max-content);
+  width: 100%;
+  padding: 2rem 1.5rem;
+  background-color: rgba(140, 65, 230, 0.05);
+  border-radius: 1.3rem;
+  align-content: center;
+  justify-content: center;
+
+  @include respond(phone){ //width <900 ?
+    grid-column: full-start/full-end;
+  }
+
+  &__profileImg{
+    grid-column: dp-start/dp-end;
+    grid-row: 1/3;
+    object-fit: cover;
+    object-position: center;
+    width: 6rem;
+    height: 6rem;
+    margin: 1.5rem;
+
+    @include respond(tab-port){ //width <900 ?
+      width: 4rem;
+      height: 4rem;
+      margin: .5rem;
+    }
+
+        & img {
+          border-radius: 50%;
+          width: 6rem;
+          height: 6rem;
+
+          @include respond(tab-port){ //width <900 ?
+            width: 4rem;
+            height: 4rem;
+          }
+        }
+  }
+  &__text {
+    grid-column: text-start/text-end;
+    grid-row: 1/3;
+    //display: grid;
+    //grid-template-columns:[text-start]min-content [text-end img-start] min-content [img-end video-start] min-content[video-end];
+    //grid-template-rows: min-content;
+    //justify-content: space-around;
+    width: 100%;
+    margin-top:3rem;
+    margin-right: 2rem;
+
+    @include respond(tab-port){ //width <900 ?
+      width: 75%;
+    }
+  }
+
+  &__media{
+    grid-column: media-start/media-end;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: min-content [img-start] min-content [img-end] min-content [video-start] min-content[video-end];
+    grid-template-rows: min-content;
+    align-self: end;
+    justify-content: space-evenly;
+    &-img{
+      margin: 2rem;
+      cursor: pointer;
+
+      &  input{
+        display: none;
+      }
+    }
+    &-video{
+      margin: 2rem;
+    }
+
+  }
+
+  &__category{
+    grid-column: category-start/category-end;
+    grid-row: 2/3;
+    position: relative;
+
+      input::placeholder{
+        padding-left: 1rem;
+
+      }
+  }
+  &__btn{
+    grid-column: uploadfull-start/uploadfull-end;
+    grid-row: 3/4;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+        .btn{
+          border: none;
+          padding: 1.2rem;
+          font-size: 2.2rem;
+          line-height: 2rem;
+          letter-spacing: 2px;
+          background: linear-gradient(to right ,$color-primary-dark,$color-primary,$color-primary-light);
+          color:$color-white;
+          border-radius: 1rem;
+          display: block;
+          width: 34rem;
+          box-shadow: grey 0 .3rem 1rem .1rem;
+
+          &:active,
+          &:focus{
+            outline: none;
+            animation: btnAnimation .8s;
+          }
+        }
+  }
+
+}
+.profilePic{
+  width: 10rem;
+  height: 10rem;
+}
+
+.upload__icon{
+  width: 5rem;
+  height:5rem;
+
+  @include respond(tab-port){ //width <900 ?
+    width: 4rem;
+    height:4rem;
+  }
+
+}
+#inputField{
+  width: 27rem;
+  height: 13rem;
+  border: 1.5px solid $color-primary-light;
+  border-radius: 1rem;
+  resize: none;
+  &:focus{
+    outline: none;
+    border: 2.5px solid $color-primary-dark;
+    border-radius: 1rem;
+  }
+  @include respond(tab-port){ //width <900 ?
+    width: 15rem;
+    height: 9rem;
+  }
+
+
+}
+
+#categoryInput{
+  width: 23rem;
+  height: 91%;
+  border: 1.5px solid $color-primary-light;
+  border-radius: 1rem;
+  &:focus{
+    outline: none;
+    border: 2.5px solid $color-primary-dark;
+    border-radius: 1rem;
+  }
+
+  @include respond(tab-port){ //width <900 ?
+    width: 15rem;
+    height: 86%;
+  }
+
+}
+.suggestion{
+  position: absolute;
+  top: 4.4rem;
+  left: 1rem;
+  width: 92%;
+  color: $color-white;
+  background-color: $color-grey-dark;
+  border-radius: .4rem;
+
+    div:hover {
+      color: $color-grey-dark;
+      background-color: $color-grey;
+      width:105%;
+      margin-left: -.6rem;
+      padding: .4rem;
+      padding-left: .6rem;
+      border-radius: .4rem;
+      color:$color-grey-dark;
+
+    }
+}
+.line{
+  display: inline;
+  width: 2px;
+  height:3rem;
+  background-color: $color-primary;
+  align-self: center;
+}
+.paddingClass{
+  padding: .4rem;
+  padding-left: .6rem;
+}
+

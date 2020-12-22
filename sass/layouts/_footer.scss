@@ -1,0 +1,36 @@
+.footer{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(140, 65, 230, 0.05);
+  border-radius: 1.3rem;
+  color: #646464;
+
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    .listItem{
+      font-size: 11px;
+      padding: 8px;
+    }
+  }
+  &__authorities{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 14px;
+
+    &-text{
+      font-size: 10px;
+      align-self: center;
+      margin: 10px;
+    }
+    &-logo{
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

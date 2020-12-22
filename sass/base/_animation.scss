@@ -1,0 +1,18 @@
+@keyframes btnAnimation {
+  0%{
+    box-shadow: grey 0 .3rem 1rem .1rem;
+    transform: scale(1);
+  }
+  20%{
+    box-shadow: grey 0 .25rem .8rem .08rem;
+    transform: scale(.98);
+  }
+  75%{
+    box-shadow: grey 0 .15rem .5rem .05rem;
+    transform: scale(.95);
+  }
+  100%{
+    box-shadow: grey 0 .3rem 1rem .1rem;
+    transform: scale(1);
+  }
+}

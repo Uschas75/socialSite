@@ -1,4 +1,23 @@
-body{
-  background: aqua;
-  height: 100vh;
-}
+
+@import "abstract/mixins";
+@import "abstract/variables";
+@import "abstract/function";
+
+@import "base/animation";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "layouts/header";
+@import "layouts/navigation";
+@import "layouts/footer";
+@import "layouts/body";
+
+@import "component/filter";
+@import "component/upload";
+@import "component/newsFeed";
+@import "component/chat";
+
+
+
+@import "pages/home";

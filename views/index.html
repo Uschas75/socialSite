@@ -5,10 +5,808 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Document</title>
+    <title>Social Site</title>
 </head>
+<!-- onload="windowLoad()"-->
 <body>
-test
+    <div class="container">
+        <nav class="navigation">
+            <div class="navigation__logo">
+                <img class="logo" src="../img/logo1.png" alt="nothing fancy">
+            </div>
+            <div class="navigation__items">
+
+                <ul class="navigation__items-list">
+                    <li class="list list_active">
+                        <svg class="navigation__items-listIcon">
+                            <use xlink:href="../img/sprite.svg#icon-house"></use>
+                        </svg>
+                      <p class="navigation__items-listText">home</p>
+                    </li>
+                    <li class="list">
+                        <svg class="navigation__items-listIcon">
+                            <use xlink:href="../img/sprite.svg#icon-profile"></use>
+                        </svg>
+                        <p class="navigation__items-listText">profile</p>
+                    </li>
+                    <li class="list">
+                        <svg class="navigation__items-listIcon">
+                            <use xlink:href="../img/sprite.svg#icon-message"></use>
+                        </svg>
+                        <p class="navigation__items-listText">message</p>
+                    </li>
+                    <li class="list">
+                        <svg class="navigation__items-listIcon">
+                            <use xlink:href="../img/sprite.svg#icon-notification"></use>
+                        </svg>
+                        <p class="navigation__items-listText">notification</p>
+                    </li>
+                    <li class="list">
+                        <svg class="navigation__items-listIcon">
+                            <use xlink:href="../img/sprite.svg#icon-settings"></use>
+                        </svg>
+                        <p class="navigation__items-listText">settings</p>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!---header start--->
+        <header class="header">
+            <div class="header__topic">
+<!--                <h1 class="primaryHeader">Others invention : </h1>-->
+                <p class="primary__heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eaque esse expedita
+                    facere fugiat harum, hic iusto minima modi molestias mollitia omnis quibusdam, quis tempora veniam veritatis vero.
+                    A ad labore magni quam ratione! Animi, nam, similique. Autem doloremque earum in veniam voluptas voluptatem! Architecto
+                    beatae dolorum ducimus nesciunt non nostrum, quibusdam voluptatum. Adipisci, assumenda blanditiis commodi consequatur cum,
+                    deserunt distinctio dolorem est eum fuga id in labore magni maxime minus natus nulla odio quas quidem quisquam repellendus,
+                    tempora voluptates! A beatae consequuntur distinctio ducimus ea eius error esse eum exercitationem expedita facere fugit
+                    id illum inventore, iure magnam minus molestiae nisi non, porro quas quisquam quos repellat sapiente ullam veniam voluptas!
+                    Ex, id laboriosam neque nostrum odio quod reiciendis. Accusantium aliquid asperiores beatae consectetur consequatur dolores
+                    ea eaque earum magni nihil optio quasi, ullam vel velit voluptas? Beatae, consectetur cum cupiditate dolorem eligendi excepturi fugit itaque laboriosam, laborum, minima reprehenderit vel voluptatibus. Ab beatae, blanditiis debitis dolore esse excepturi facilis labore reprehenderit ullam! Adipisci architecto at commodi doloremque esse nobis possimus quia quidem rerum saepe sunt tempore temporibus, vel. Adipisci atque beatae culpa enim est excepturi,
+                    fuga harum illo ipsa iure maiores nostrum pariatur quo quod repellendus saepe voluptatibus.</p>
+
+                <img src="../img/image1.jpg" alt="nothing to show" class="header__img">
+            </div>
+
+            <div class="header__reaction">
+                <svg class="header__icon">
+                    <use xlink:href="../img/sprite.svg#icon-appreciation"></use>
+                </svg>
+                <svg class="header__icon">
+                    <use xlink:href="../img/sprite.svg#icon-conversation"></use>
+                </svg>
+                <svg class="header__icon">
+                    <use xlink:href="../img/sprite.svg#icon-post"></use>
+                </svg>
+                <svg class="header__icon">
+                    <use xlink:href="../img/sprite.svg#icon-share"></use>
+                </svg>
+            </div>
+
+        </header>
+
+        <section class="upload">
+            <!--profile picture-->
+           <div class="upload__profileImg">
+               <img src="../img/profilePic.jpg" alt="else" class="profilePic">
+           </div>
+            <!--input text-->
+            <div class="upload__text">
+                <textarea id="inputField" rows="4" cols="50" placeholder="Upload your work"></textarea>
+            </div>
+            <!--input media-->
+            <div class="upload__media">
+                <div class="line"></div>
+                <div class="upload__media-img">
+                    <label for="uploadImage">
+                        <svg class="upload__icon">
+                            <use xlink:href="../img/sprite.svg#icon-image"></use>
+                        </svg>
+                       <input type="file"  accept="image/*" name="image" id="uploadImage"  onchange="loadFile(event)">
+                    </label>
+
+                </div>
+                <div class="line"></div>
+                <div class="upload__media-video">
+                    <svg class="upload__icon">
+                        <use xlink:href="../img/sprite.svg#icon-video"></use>
+                    </svg>
+                </div>
+            </div>
+<!--            <div class="upload__workDetails">-->
+<!--                <input type="text" placeholder="details">-->
+<!--            </div>-->
+            <div class="upload__category">
+                <input  class="searchInput" id="categoryInput" type="text" placeholder="category" >
+                <div id="paddingClass" class="suggestion">
+                </div>
+            </div>
+            <div class="upload__btn">
+               <button class="btn">
+                   upload
+               </button>
+            </div>
+        </section>
+
+
+        <!---upload section end--->
+
+
+        <!--filter section start-->
+        <section class="filter">
+            <div class="filter__title secondary__heading">
+                your field of interest
+            </div>
+            <div class="filter__lists">
+                <div class="filter__lists-items">
+                    <label for="icon0" class="filter__lists-icon">
+                        <input type="checkbox" id="icon0">
+                        <span class="checkMate"></span>
+                    </label>
+                    <div class="filter__lists-text">php</div>
+                   <div class="filter__lists-delete" onclick="deleteThis()"></div>
+                </div>
+
+
+                <div class="filter__lists-items">
+                    <label for="icon1" class="filter__lists-icon">
+                        <input type="checkbox" id="icon1">
+                        <span class="checkMate"></span>
+                    </label>
+                    <div class="filter__lists-text">javascript</div>
+                    <div class="filter__lists-delete" onclick="deleteThis()"></div>
+                </div>
+
+                <div class="filter__lists-items">
+                    <label for="icon2" class="filter__lists-icon">
+                        <input type="checkbox" id="icon2">
+                        <span class="checkMate"></span>
+                    </label>
+                    <div class="filter__lists-text">html</div>
+                    <div class="filter__lists-delete" onclick="deleteThis()"></div>
+                </div>
+
+                <div class="filter__lists-items">
+                    <label for="icon3" class="filter__lists-icon">
+                        <input type="checkbox" id="icon3">
+                        <span class="checkMate"></span>
+                    </label>
+                    <div class="filter__lists-text">css</div>
+                    <div class="filter__lists-delete" onclick="deleteThis()"></div>
+                </div>
+
+            </div>
+
+            <div class="filter__input">
+                <input type="text" class="filter__input-text" placeholder="add your skill">
+                <svg class="filter__input-icon">
+                    <use xlink:href="../img/sprite.svg#icon-plus"></use>
+                </svg>
+            </div>
+        </section>
+        <!--filter section end-->
+
+
+        <!--newsfeed section start-->
+
+        <main class="main">
+           <div class="newsFeed">
+
+
+               <div class="newsFeed-sub">
+                   <div class="profileDetails">
+                       <div class="profileDetails__img">
+                           <img src="../img/headerImg-1.jpg" alt="nothing to show" class="profilePicture">
+                       </div>
+                       <div class="profileDetails__bio">
+                           <h4 class="name">uschas</h4>
+                           <h5 class="location">Gaibandha , Rangpur ,Bangladesh</h5>
+                       </div>
+                   </div>
+                   <div class="workDetails">
+                       <div class="workDetails__Div">
+                           <img src="../img/headerImg-1.jpg" alt="nothing to show" class="workDetails__img">
+                       </div>
+
+                       <div class="workDetails__reactionCount">
+                           <div class="reactionsLike">
+                               <p class="reactionPara ">88</p>
+                               <svg class="reactionIcon">
+                                   <use xlink:href="../img/sprite.svg#icon-like"></use>
+                               </svg>
+                           </div>
+                           <div class="reactionComment">
+                               <p class="reactionPara">23</p>
+                               <svg class="reactionIcon">
+                                   <use xlink:href="../img/sprite.svg#icon-comment"></use>
+                               </svg>
+                           </div>
+                           <div class="reactionShare">
+                               <p class="reactionPara">1</p>
+                               <svg class="reactionIcon">
+                                   <use xlink:href="../img/sprite.svg#icon-share"></use>
+                               </svg>
+                           </div>
+                           <table class="workCategory">
+                               <tr>
+                                   <th>category</th>
+                                   <td>disney</td>
+                                   <td>waterLand</td>
+                                   <td>photoShop</td>
+                               </tr>
+                           </table>
+                       </div>
+                   </div>
+                   <div class="reactionDetails">
+                       <div class="like">
+                           <p class="para">like</p>
+                           <svg class="commentIcon">
+                               <use xlink:href="../img/sprite.svg#icon-like"></use>
+                           </svg>
+                       </div>
+                       <div class="comment" onclick="onclickFunction()">
+                           <p class="para">comment</p>
+                           <svg class="commentIcon">
+                               <use xlink:href="../img/sprite.svg#icon-comment"></use>
+                           </svg>
+                       </div>
+                       <div class="share">
+                           <p class="para">share</p>
+                           <svg class="commentIcon">
+                               <use xlink:href="../img/sprite.svg#icon-share"></use>
+                           </svg>
+                       </div>
+                   </div>
+                   <span class="lineDivider"></span>
+
+
+                   <div class="commentDetails">
+                       <div class="profileBasedComment">
+                           <img src="../img/headerImg-1.jpg" alt="nothing to show" class="profilePicture">
+                           <p class="commentText">Lorem ipsum dolor sit amet.</p>
+                       </div>
+                       <div class="commentInput__div">
+                           <input type="text" class="commentInput">
+                           <button class="commentBtn">add</button>
+                       </div>
+                   </div>
+               </div>
+
+
+
+
+               <div class="newsFeed-sub">
+                   <div class="profileDetails">
+                       <div class="profileDetails__img">
+                           <img src="../img/profilePic.jpg" alt="nothing to show" class="profilePicture">
+                       </div>
+                       <div class="profileDetails__bio">
+                           <h4 class="name">uschas</h4>
+                           <h5 class="location">Gaibandha , Rangpur ,Bangladesh</h5>
+                       </div>
+                   </div>
+                   <div class="workDetails">
+                       <div class="workDetails__Div">
+                           <img src="../img/rose 2.jpg" alt="nothing to show" class="workDetails__img">
+                       </div>
+
+                       <div class="workDetails__reactionCount">
+                           <div class="reactionsLike">
+                               <p class="reactionPara ">88</p>
+                               <svg class="reactionIcon">
+                                   <use xlink:href="../img/sprite.svg#icon-like"></use>
+                               </svg>
+                           </div>
+                           <div class="reactionComment">
+                               <p class="reactionPara">23</p>
+                               <svg class="reactionIcon">
+                                   <use xlink:href="../img/sprite.svg#icon-comment"></use>
+                               </svg>
+                           </div>
+                           <div class="reactionShare">
+                               <p class="reactionPara">1</p>
+                               <svg class="reactionIcon">
+                                   <use xlink:href="../img/sprite.svg#icon-share"></use>
+                               </svg>
+                           </div>
+                           <table class="workCategory">
+                               <tr>
+                                   <th>category</th>
+                                   <td>disney</td>
+                                   <td>waterLand</td>
+                                   <td>photoShop</td>
+                               </tr>
+                           </table>
+                       </div>
+                   </div>
+                   <div class="reactionDetails">
+                       <div class="like">
+                           <p class="para">like</p>
+                           <svg class="commentIcon">
+                               <use xlink:href="../img/sprite.svg#icon-like"></use>
+                           </svg>
+                       </div>
+                       <div class="comment" onclick="onclickFunction()">
+                           <p class="para">comment</p>
+                           <svg class="commentIcon">
+                               <use xlink:href="../img/sprite.svg#icon-comment"></use>
+                           </svg>
+                       </div>
+                       <div class="share">
+                           <p class="para">share</p>
+                           <svg class="commentIcon">
+                               <use xlink:href="../img/sprite.svg#icon-share"></use>
+                           </svg>
+                       </div>
+                   </div>
+                   <span class="lineDivider"></span>
+
+
+                   <div class="commentDetails">
+                       <div class="profileBasedComment">
+                           <img src="../img/headerImg-1.jpg" alt="nothing to show" class="profilePicture">
+                           <p class="commentText">Lorem ipsum dolor sit amet.</p>
+                       </div>
+                       <div class="commentInput__div">
+                           <input type="text" class="commentInput">
+                           <button class="commentBtn">add</button>
+                       </div>
+                   </div>
+               </div>
+
+
+
+
+
+
+               <div class="newsFeed-sub">
+                   <div class="profileDetails">
+                       <div class="profileDetails__img">
+                           <img src="../img/headerImg-1.jpg" alt="nothing to show" class="profilePicture">
+                       </div>
+                       <div class="profileDetails__bio">
+                           <h4 class="name">uschas</h4>
+                           <h5 class="location">Gaibandha , Rangpur ,Bangladesh</h5>
+                       </div>
+                   </div>
+                   <div class="workDetails">
+                       <div class="workDetails__Div">
+                           <p class="workDetails__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eaque esse expedita
+                               facere fugiat harum, hic iusto minima modi molestias mollitia omnis quibusdam, quis tempora veniam veritatis vero.
+                               A ad labore magni quam ratione! Animi, nam, similique. Autem doloremque earum in veniam voluptas voluptatem! Architecto
+                               beatae dolorum ducimus nesciunt non nostrum, quibusdam voluptatum. Adipisci, assumenda blanditiis commodi consequatur cum,
+                               deserunt distinctio dolorem est eum fuga id in labore magni maxime minus natus nulla odio quas quidem quisquam repellendus,
+                               tempora voluptates! A beatae consequuntur distinctio ducimus ea eius error esse eum exercitationem expedita facere fugit
+                               id illum inventore, iure magnam minus molestiae nisi non, porro quas quisquam quos repellat sapiente ullam veniam voluptas!
+                               Ex, id laboriosam neque nostrum odio quod reiciendis. Accusantium aliquid asperiores beatae consectetur consequatur dolores
+                               ea eaque earum magni nihil optio quasi, ullam vel velit voluptas? Beatae, consectetur cum cupiditate dolorem eligendi excepturi fugit itaque laboriosam, laborum, minima reprehenderit vel voluptatibus. Ab beatae, blanditiis debitis dolore esse excepturi facilis labore reprehenderit ullam! Adipisci architecto at commodi doloremque esse nobis possimus quia quidem rerum saepe sunt tempore temporibus, vel. Adipisci atque beatae culpa enim est excepturi,
+                               fuga harum illo ipsa iure maiores nostrum pariatur quo quod repellendus saepe voluptatibus.</p>
+                       </div>
+                       <span class="lineDivider"></span>
+                       <div class="workDetails__reactionCount">
+                           <div class="reactionsLike">
+                               <p class="reactionPara ">88</p>
+                               <svg class="reactionIcon">
+                                   <use xlink:href="../img/sprite.svg#icon-like"></use>
+                               </svg>
+                           </div>
+                           <div class="reactionComment">
+                               <p class="reactionPara">23</p>
+                               <svg class="reactionIcon">
+                                   <use xlink:href="../img/sprite.svg#icon-comment"></use>
+                               </svg>
+                           </div>
+                           <div class="reactionShare">
+                               <p class="reactionPara">1</p>
+                               <svg class="reactionIcon">
+                                   <use xlink:href="../img/sprite.svg#icon-share"></use>
+                               </svg>
+                           </div>
+                           <table class="workCategory">
+                               <tr>
+                                   <th>category</th>
+                                   <td>disney</td>
+                                   <td>waterLand</td>
+                                   <td>photoShop</td>
+                               </tr>
+                           </table>
+                       </div>
+                   </div>
+                   <div class="reactionDetails">
+                       <div class="like">
+                           <p class="para">like</p>
+                           <svg class="commentIcon">
+                               <use xlink:href="../img/sprite.svg#icon-like"></use>
+                           </svg>
+                       </div>
+                       <div class="comment" onclick="onclickFunction()">
+                           <p class="para">comment</p>
+                           <svg class="commentIcon">
+                               <use xlink:href="../img/sprite.svg#icon-comment"></use>
+                           </svg>
+                       </div>
+                       <div class="share">
+                           <p class="para">share</p>
+                           <svg class="commentIcon">
+                               <use xlink:href="../img/sprite.svg#icon-share"></use>
+                           </svg>
+                       </div>
+                   </div>
+                   <span class="lineDivider"></span>
+
+
+                   <div class="commentDetails">
+                       <div class="profileBasedComment">
+                           <img src="../img/headerImg-1.jpg" alt="nothing to show" class="profilePicture">
+                           <p class="commentText">Lorem ipsum dolor sit amet.</p>
+                       </div>
+                       <div class="commentInput__div">
+                           <input type="text" class="commentInput">
+                           <button class="commentBtn">add</button>
+                       </div>
+                   </div>
+               </div>
+
+
+               <div class="newsFeed-sub">
+                   <div class="profileDetails">
+                       <div class="profileDetails__img">
+                           <img src="../img/headerImg-1.jpg" alt="nothing to show" class="profilePicture">
+                       </div>
+                       <div class="profileDetails__bio">
+                           <h4 class="name">uschas</h4>
+                           <h5 class="location">Gaibandha , Rangpur ,Bangladesh</h5>
+                       </div>
+                   </div>
+                   <div class="workDetails">
+                       <div class="workDetails__Div">
+                           <p class="workDetails__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eaque esse expedita
+                               facere fugiat harum, hic iusto minima modi molestias mollitia omnis quibusdam, quis tempora veniam veritatis vero.
+                               A ad labore magni quam ratione! Animi, nam, similique. Autem doloremque earum in veniam voluptas voluptatem! Architecto
+                               beatae dolorum ducimus nesciunt non nostrum, quibusdam voluptatum. Adipisci, assumenda blanditiis commodi consequatur cum,
+                               deserunt distinctio dolorem est eum fuga id in labore magni maxime minus natus nulla odio quas quidem quisquam repellendus,
+                               tempora voluptates! A beatae consequuntur distinctio ducimus ea eius error esse eum exercitationem expedita facere fugit
+                               id illum inventore, iure magnam minus molestiae nisi non, porro quas quisquam quos repellat sapiente ullam veniam voluptas!
+                               Ex, id laboriosam neque nostrum odio quod reiciendis. Accusantium aliquid asperiores beatae consectetur consequatur dolores
+                               ea eaque earum magni nihil optio quasi, ullam vel velit voluptas? Beatae, consectetur cum cupiditate dolorem eligendi excepturi fugit itaque laboriosam, laborum, minima reprehenderit vel voluptatibus. Ab beatae, blanditiis debitis dolore esse excepturi facilis labore reprehenderit ullam! Adipisci architecto at commodi doloremque esse nobis possimus quia quidem rerum saepe sunt tempore temporibus, vel. Adipisci atque beatae culpa enim est excepturi,
+                               fuga harum illo ipsa iure maiores nostrum pariatur quo quod repellendus saepe voluptatibus.</p>
+
+                           <img src="../img/image1.jpg" alt="nothing to show" class="workDetails__img">
+                        </div>
+                       <span class="lineDivider"></span>
+                       <div class="workDetails__reactionCount">
+                           <div class="reactionsLike">
+                               <p class="reactionPara ">88</p>
+                               <svg class="reactionIcon">
+                                   <use xlink:href="../img/sprite.svg#icon-like"></use>
+                               </svg>
+                           </div>
+                           <div class="reactionComment">
+                               <p class="reactionPara">23</p>
+                               <svg class="reactionIcon">
+                                   <use xlink:href="../img/sprite.svg#icon-comment"></use>
+                               </svg>
+                           </div>
+                           <div class="reactionShare">
+                               <p class="reactionPara">1</p>
+                               <svg class="reactionIcon">
+                                   <use xlink:href="../img/sprite.svg#icon-share"></use>
+                               </svg>
+                           </div>
+                           <table class="workCategory">
+                               <tr>
+                                   <th>category</th>
+                                   <td>disney</td>
+                                   <td>waterLand</td>
+                                   <td>photoShop</td>
+                               </tr>
+                           </table>
+                       </div>
+                   </div>
+                   <div class="reactionDetails">
+                       <div class="like">
+                           <p class="para">like</p>
+                           <svg class="commentIcon">
+                               <use xlink:href="../img/sprite.svg#icon-like"></use>
+                           </svg>
+                       </div>
+                       <div class="comment" onclick="onclickFunction()">
+                           <p class="para">comment</p>
+                           <svg class="commentIcon">
+                               <use xlink:href="../img/sprite.svg#icon-comment"></use>
+                           </svg>
+                       </div>
+                       <div class="share">
+                           <p class="para">share</p>
+                           <svg class="commentIcon">
+                               <use xlink:href="../img/sprite.svg#icon-share"></use>
+                           </svg>
+                       </div>
+                   </div>
+                   <span class="lineDivider"></span>
+
+
+                   <div class="commentDetails">
+                       <div class="profileBasedComment">
+                           <img src="../img/headerImg-1.jpg" alt="nothing to show" class="profilePicture">
+                           <p class="commentText">Lorem ipsum dolor sit amet.</p>
+                       </div>
+                       <div class="commentInput__div">
+                           <input type="text" class="commentInput">
+                           <button class="commentBtn">add</button>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+
+            <div class="chatFooter" id="chatFooterId">
+                <div class="chat">
+                    <div class="chat__title secondary__heading">chat
+                    </div>
+
+                    <!--list items start-->
+                    <div class="chat__list-main">
+                        <div class="chat__list">
+                            <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                            <h4 class="chat__list-name">jitu</h4>
+                            <span class="chat__list-active"></span>
+                        </div>
+
+                        <span class="lineDivider"></span>
+                        <div class="chat__list">
+                            <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                            <h4 class="chat__list-name">uschas</h4>
+                            <span class="chat__list-active"></span>
+                        </div>
+
+                        <span class="lineDivider"></span>
+                        <div class="chat__list">
+                            <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                            <h4 class="chat__list-name">sakib</h4>
+                            <span class="chat__list-active"></span>
+                        </div>
+
+                        <span class="lineDivider"></span>
+                        <div class="chat__list">
+                            <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                            <h4 class="chat__list-name">nazmus</h4>
+                            <span class="chat__list-active"></span>
+                        </div>
+
+                        <span class="lineDivider"></span>
+                        <div class="chat__list">
+                            <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                            <h4 class="chat__list-name">ragib</h4>
+                            <span class="chat__list-active"></span>
+                        </div>
+
+                        <span class="lineDivider"></span>
+                        <div class="chat__list">
+                            <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                            <h4 class="chat__list-name">ahsan</h4>
+                            <span class="chat__list-active"></span>
+                        </div>
+
+                        <span class="lineDivider"></span>
+                        <div class="chat__list">
+                            <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                            <h4 class="chat__list-name">akash</h4>
+                            <span class="chat__list-active"></span>
+                        </div>
+
+                        <span class="lineDivider"></span>
+                        <div class="chat__list">
+                            <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                            <h4 class="chat__list-name">rayhan</h4>
+                            <span class="chat__list-active"></span>
+                        </div>
+
+                        <span class="lineDivider"></span>
+                        <div class="chat__list">
+                            <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                            <h4 class="chat__list-name">rashed</h4>
+                            <span class="chat__list-active"></span>
+                        </div>
+
+                        <span class="lineDivider"></span>
+                        <div class="chat__list">
+                            <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                            <h4 class="chat__list-name">nizman</h4>
+                            <span class="chat__list-active"></span>
+                        </div>
+
+                        <span class="lineDivider"></span>
+                        <div class="chat__list">
+                            <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                            <h4 class="chat__list-name">siam</h4>
+                            <span class="chat__list-active"></span>
+                        </div>
+
+                        <span class="lineDivider"></span>
+                        <div class="chat__list">
+                            <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                            <h4 class="chat__list-name">anzir</h4>
+                            <span class="chat__list-active"></span>
+                        </div>
+                        <!--list items end-->
+                    </div>
+
+
+                    <div class="chat__search">
+                        <svg class="chat__icon">
+                            <use xlink:href="../img/sprite.svg#icon-search"></use>
+                        </svg>
+                        <input class="chat__search-field" placeholder="search friend">
+                    </div>
+
+
+                </div>
+                <footer class="footer">
+                    <ul class="footer__list">
+                        <li class="listItem">About</li>
+                        <li class="listItem"> Accessibility</li>
+                        <li class="listItem">Help</li>
+                        <li class="listItem">Center</li>
+                        <li class="listItem">Privacy & Terms</li>
+                        <li class="listItem"> Ad Choices</li>
+                        <li class="listItem">Advertising</li>
+                        <li class="listItem">Business Services</li>
+                        <li class="listItem"> Get the LinkedIn app</li>
+                        <li class="listItem">  More</li>
+                    </ul>
+                    <span class="lineDivider"></span>
+                    <span class="footer__authorities">
+                        <img class="footer__authorities-logo" src="../img/logo1.png" alt="nothing fancy">
+                        <h5 class="footer__authorities-text">&copy; by uschas</h5>
+                    </span>
+                </footer>
+            </div>
+        </main>
+    </div>
+    <div class="chatPopUp" onclick="popUpFunction()">
+        <svg>
+            <use xlink:href="../img/sprite.svg#icon-chat"></use>
+        </svg>
+    </div>
+        <div class="chatFooter2" id="chatFooterId2">
+            <div class="chat">
+                <div class="chat__title secondary__heading">chat
+                </div>
+
+                <!--list items start-->
+                <div class="chat__list-main">
+                    <div class="chat__list">
+                        <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                        <h4 class="chat__list-name">jitu</h4>
+                        <span class="chat__list-active"></span>
+                    </div>
+
+                    <span class="lineDivider"></span>
+                    <div class="chat__list">
+                        <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                        <h4 class="chat__list-name">uschas</h4>
+                        <span class="chat__list-active"></span>
+                    </div>
+
+                    <span class="lineDivider"></span>
+                    <div class="chat__list">
+                        <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                        <h4 class="chat__list-name">sakib</h4>
+                        <span class="chat__list-active"></span>
+                    </div>
+
+                    <span class="lineDivider"></span>
+                    <div class="chat__list">
+                        <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                        <h4 class="chat__list-name">nazmus</h4>
+                        <span class="chat__list-active"></span>
+                    </div>
+
+                    <span class="lineDivider"></span>
+                    <div class="chat__list">
+                        <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                        <h4 class="chat__list-name">ragib</h4>
+                        <span class="chat__list-active"></span>
+                    </div>
+
+                    <span class="lineDivider"></span>
+                    <div class="chat__list">
+                        <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                        <h4 class="chat__list-name">ahsan</h4>
+                        <span class="chat__list-active"></span>
+                    </div>
+
+                    <span class="lineDivider"></span>
+                    <div class="chat__list">
+                        <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                        <h4 class="chat__list-name">akash</h4>
+                        <span class="chat__list-active"></span>
+                    </div>
+
+                    <span class="lineDivider"></span>
+                    <div class="chat__list">
+                        <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                        <h4 class="chat__list-name">rayhan</h4>
+                        <span class="chat__list-active"></span>
+                    </div>
+
+                    <span class="lineDivider"></span>
+                    <div class="chat__list">
+                        <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                        <h4 class="chat__list-name">rashed</h4>
+                        <span class="chat__list-active"></span>
+                    </div>
+
+                    <span class="lineDivider"></span>
+                    <div class="chat__list">
+                        <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                        <h4 class="chat__list-name">nizman</h4>
+                        <span class="chat__list-active"></span>
+                    </div>
+
+                    <span class="lineDivider"></span>
+                    <div class="chat__list">
+                        <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                        <h4 class="chat__list-name">siam</h4>
+                        <span class="chat__list-active"></span>
+                    </div>
+
+                    <span class="lineDivider"></span>
+                    <div class="chat__list">
+                        <img src="../img/profilePic.jpg" alt="else" class="chat__list-img">
+                        <h4 class="chat__list-name">anzir</h4>
+                        <span class="chat__list-active"></span>
+                    </div>
+                    <!--list items end-->
+                </div>
+
+
+                <div class="chat__search">
+                    <svg class="chat__icon">
+                        <use xlink:href="../img/sprite.svg#icon-search"></use>
+                    </svg>
+                    <input class="chat__search-field" placeholder="search friend">
+                </div>
+
+
+            </div>
+            <footer class="footer">
+                <ul class="footer__list">
+                    <li class="listItem">About</li>
+                    <li class="listItem"> Accessibility</li>
+                    <li class="listItem">Help</li>
+                    <li class="listItem">Center</li>
+                    <li class="listItem">Privacy & Terms</li>
+                    <li class="listItem"> Ad Choices</li>
+                    <li class="listItem">Advertising</li>
+                    <li class="listItem">Business Services</li>
+                    <li class="listItem"> Get the LinkedIn app</li>
+                    <li class="listItem">  More</li>
+                </ul>
+                <span class="lineDivider"></span>
+                <span class="footer__authorities">
+                        <img class="footer__authorities-logo" src="../img/logo1.png" alt="nothing fancy">
+                        <h5 class="footer__authorities-text">&copy; by uschas</h5>
+                    </span>
+            </footer>
+        </div>
+    <div class="chatClose">
+        <svg>
+            <use xlink:href="../img/sprite.svg#icon-close"></use>
+        </svg>
+    </div>
+
+    <script src="../js/index.js"></script>
+    <script src="../js/filter.js"></script>
+    <script src="../js/upload.js"></script>
+    <script src="../js/comment.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/chat.js"></script>
 </body>
 </html>
